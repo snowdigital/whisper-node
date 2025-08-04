@@ -1,0 +1,76 @@
+{
+	"name": "whisper-node",
+	"version": "0.0.1",
+	"description": "NodeJS interface for whisper.cpp",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"publishConfig": {
+		"access": "public"
+	},
+	"bin": {
+		"nodejs-whisper": "dist/downloadModel.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/snowdigital/whisper-node"
+	},
+	"scripts": {
+		"start": "ts-node src/index.ts",
+		"dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
+		"test": "npm run build && ts-node example/index.ts",
+		"typecheck": "tsc --noEmit",
+		"build": "tsc",
+		"format": "prettier --write src/**/*.ts"
+	},
+	"keywords": [
+		"OpenAI",
+		"Whisper",
+		"CPP",
+		"C++",
+		"Whisper",
+		"Bindings",
+		"Transcript",
+		"Transcriber",
+		"Audio",
+		"Speech",
+		"Speech-to-Text",
+		"Timestamps",
+		"nodejs whisper",
+		"whisper nodejs",
+		"generate timestamps",
+		"generate transcript",
+		"subtitle",
+		"nodejs-whisper",
+		"audio-to-subtitles",
+		"whisper-node"
+	],
+	"author": "snowdigital",
+	"license": "MIT",
+	"homepage": "https://github.com/snowdigital/whisper-node#readme",
+	"bugs": {
+		"url": "https://github.com/snowdigital/whisper-node/issues"
+	},
+	"dependencies": {
+		"cmake-js": "^7.3.1",
+		"readline-sync": "^1.4.10",
+		"shelljs": "^0.10.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.0.3",
+		"@types/readline-sync": "^1.4.4",
+		"@types/shelljs": "^0.8.12",
+		"@typescript-eslint/eslint-plugin": "^8.38.0",
+		"@typescript-eslint/parser": "^8.38.0",
+		"eslint": "^8.9.0",
+		"eslint-config-google": "^0.14.0",
+		"eslint-plugin-import": "^2.32.0",
+		"prettier": "^3.0.0",
+		"ts-loader": "^9.5.2",
+		"ts-node": "^10.8.2",
+		"typescript": "^5.1.6"
+	},
+	"files": [
+		"dist/",
+		"cpp/"
+	]
+}
